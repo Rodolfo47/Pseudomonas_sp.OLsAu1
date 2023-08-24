@@ -1,0 +1,7 @@
+data/*
+out/bowtie/*
+*.fq
+*.fastq
+*.gz
+*.bai
+*.bam
