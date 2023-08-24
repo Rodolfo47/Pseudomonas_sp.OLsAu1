@@ -1,0 +1,15 @@
+#                                                                                             --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                         accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                 ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_4_length_179944_cov_11.656412_25 -            113 66503at72274         -             89   1.6e-53  177.4   3.9   1   2   6.3e-44   3.9e-40  134.5   0.4     1    64     1    64     1    74 0.96 # 26473 # 26811 # 1 # ID=4_25;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.546
+NODE_4_length_179944_cov_11.656412_25 -            113 66503at72274         -             89   1.6e-53  177.4   3.9   2   2   6.9e-16   4.3e-12   44.6   0.3    60    89    78   107    68   107 0.89 # 26473 # 26811 # 1 # ID=4_25;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.546
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/busco_downloads/lineages/pseudomonadales_odb10/hmms/66503at72274.hmm
+# Target file:     /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_def.spades_kmer/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_def.spades_kmer/run_pseudomonadales_odb10/hmmer_output/66503at72274.out --cpu 1 /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/busco_downloads/lineages/pseudomonadales_odb10/hmms/66503at72274.hmm /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_def.spades_kmer/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /data2/PEG/hoaxaca/REAA/Pseudomonas/bin
+# Date:            Mon Feb 20 00:40:11 2023
+# [ok]

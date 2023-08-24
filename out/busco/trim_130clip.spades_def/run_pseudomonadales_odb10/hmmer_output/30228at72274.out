@@ -1,0 +1,19 @@
+#                                                                                              --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                          accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                  ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_11_length_135406_cov_37.346085_23 -            346 30228at72274         -            253  5.6e-113  374.9  17.3   1   1  1.3e-114  1.4e-111  370.3  17.3    10   253    52   345    34   345 0.87 # 21115 # 22152 # -1 # ID=11_23;partial=00;start_type=GTG;rbs_motif=3Base/5BMM;rbs_spacer=13-15bp;gc_cont=0.614
+NODE_20_length_101354_cov_35.986416_78 -            289 30228at72274         -            253   1.1e-05   23.4   0.6   1   1   1.8e-08   1.9e-05   22.7   0.6     5   146   111   259   107   267 0.77 # 94598 # 95464 # -1 # ID=20_78;partial=00;start_type=TTG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.621
+NODE_18_length_105270_cov_36.789146_44 -            299 30228at72274         -            253    0.0012   16.8   0.0   1   1   1.7e-06    0.0018   16.1   0.0     3   141   136   279   134   291 0.78 # 45680 # 46576 # 1 # ID=18_44;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.608
+NODE_7_length_160420_cov_35.917657_78  -            503 30228at72274         -            253    0.0047   14.8   0.2   1   1   8.8e-06    0.0094   13.8   0.2   129   219   143   237   128   246 0.89 # 77510 # 79018 # -1 # ID=7_78;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.626
+NODE_11_length_135406_cov_37.346085_68 -            198 30228at72274         -            253     0.013   13.4   0.0   1   1   2.2e-05     0.023   12.5   0.0    70   107   111   148   105   167 0.91 # 63094 # 63687 # -1 # ID=11_68;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.589
+NODE_50_length_54564_cov_36.982462_10  -            158 30228at72274         -            253     0.024   12.5   0.1   1   1   3.2e-05     0.034   12.0   0.1   145   219     2    75     1   111 0.88 # 13202 # 13675 # 1 # ID=50_10;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.608
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/busco_downloads/lineages/pseudomonadales_odb10/hmms/30228at72274.hmm
+# Target file:     /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_130clip.spades_def/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_130clip.spades_def/run_pseudomonadales_odb10/hmmer_output/30228at72274.out --cpu 1 /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/busco_downloads/lineages/pseudomonadales_odb10/hmms/30228at72274.hmm /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_130clip.spades_def/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /data2/PEG/hoaxaca/REAA/Pseudomonas/bin
+# Date:            Mon Feb 20 00:26:16 2023
+# [ok]

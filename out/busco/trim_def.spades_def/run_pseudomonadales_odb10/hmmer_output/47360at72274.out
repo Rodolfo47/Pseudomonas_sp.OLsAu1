@@ -1,0 +1,17 @@
+#                                                                                              --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                          accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                  ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_1_length_774295_cov_40.668278_697 -            225 47360at72274         -            209  7.8e-125  412.5   0.9   1   1  4.1e-128  8.8e-125  412.3   0.9     1   209     5   220     5   220 0.97 # 753797 # 754471 # 1 # ID=1_697;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.619
+NODE_233_length_238_cov_0.844720_1     -             61 47360at72274         -            209   1.1e-27   95.0   0.1   1   1   5.9e-31   1.3e-27   94.9   0.1     1    56     5    61     5    61 0.98 # 54 # 236 # 1 # ID=233_1;partial=01;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.546
+NODE_29_length_79520_cov_41.135065_9   -            283 47360at72274         -            209     0.023   12.4   0.2   1   2    0.0078        17    3.0   0.1   163   192   193   222   182   232 0.60 # 10432 # 11280 # 1 # ID=29_9;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.631
+NODE_29_length_79520_cov_41.135065_9   -            283 47360at72274         -            209     0.023   12.4   0.2   2   2   0.00013      0.29    8.8   0.2   152   206   224   280   212   282 0.78 # 10432 # 11280 # 1 # ID=29_9;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.631
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/busco_downloads/lineages/pseudomonadales_odb10/hmms/47360at72274.hmm
+# Target file:     /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_def.spades_def/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_def.spades_def/run_pseudomonadales_odb10/hmmer_output/47360at72274.out --cpu 1 /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/busco_downloads/lineages/pseudomonadales_odb10/hmms/47360at72274.hmm /data2/PEG/hoaxaca/REAA/Pseudomonas/bin/../out/busco/trim_def.spades_def/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /data2/PEG/hoaxaca/REAA/Pseudomonas/bin
+# Date:            Mon Feb 20 00:38:29 2023
+# [ok]

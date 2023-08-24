@@ -1,0 +1,199 @@
+/export/apps/bioconda/envs/quast/bin/quast ../out/spades/trim_130clip.spades_def/contigs.fasta ../out/spades/trim_130clip.spades_kmer/contigs.fasta ../out/spades/trim_130.spades_def/contigs.fasta ../out/spades/trim_130.spades_kmer/contigs.fasta ../out/spades/trim_75clip.spades_def/contigs.fasta ../out/spades/trim_75clip.spades_kmer/contigs.fasta ../out/spades/trim_75.spades_def/contigs.fasta ../out/spades/trim_75.spades_kmer/contigs.fasta ../out/spades/trim_def.spades_def/contigs.fasta ../out/spades/trim_def.spades_kmer/contigs.fasta ../out/spades/trim_130clip.spades_def/scaffolds.fasta ../out/spades/trim_130clip.spades_kmer/scaffolds.fasta ../out/spades/trim_130.spades_def/scaffolds.fasta ../out/spades/trim_130.spades_kmer/scaffolds.fasta ../out/spades/trim_75clip.spades_def/scaffolds.fasta ../out/spades/trim_75clip.spades_kmer/scaffolds.fasta ../out/spades/trim_75.spades_def/scaffolds.fasta ../out/spades/trim_75.spades_kmer/scaffolds.fasta ../out/spades/trim_def.spades_def/scaffolds.fasta ../out/spades/trim_def.spades_kmer/scaffolds.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-2.6.32-696.1.1.el6.x86_64-x86_64-with-centos-6.9-Final (linux_64)
+  Python version: 3.6.7
+  CPUs number: 40
+
+Started: 2023-02-19 22:57:57
+
+Logging to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/quast.log
+NOTICE: Maximum number of threads is set to 10 (use --threads option to set it manually)
+
+CWD: /data2/PEG/hoaxaca/REAA/Pseudomonas/res
+Main parameters: 
+  MODE: default, threads: 10, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  1  ../out/spades/trim_130clip.spades_def/contigs.fasta ==> trim_130clip.spades_def_contigs
+  2  ../out/spades/trim_130clip.spades_kmer/contigs.fasta ==> trim_130clip.spades_kmer_contigs
+  3  ../out/spades/trim_130.spades_def/contigs.fasta ==> trim_130.spades_def_contigs
+  4  ../out/spades/trim_130.spades_kmer/contigs.fasta ==> trim_130.spades_kmer_contigs
+  5  ../out/spades/trim_75clip.spades_def/contigs.fasta ==> trim_75clip.spades_def_contigs
+  6  ../out/spades/trim_75clip.spades_kmer/contigs.fasta ==> trim_75clip.spades_kmer_contigs
+  7  ../out/spades/trim_75.spades_def/contigs.fasta ==> trim_75.spades_def_contigs
+  8  ../out/spades/trim_75.spades_kmer/contigs.fasta ==> trim_75.spades_kmer_contigs
+  9  ../out/spades/trim_def.spades_def/contigs.fasta ==> trim_def.spades_def_contigs
+  10 ../out/spades/trim_def.spades_kmer/contigs.fasta ==> trim_def.spades_kmer_contigs
+  11 ../out/spades/trim_130clip.spades_def/scaffolds.fasta ==> trim_130clip.spades_def_scaffolds
+  12 ../out/spades/trim_130clip.spades_kmer/scaffolds.fasta ==> trim_130clip.spades_kmer_scaffolds
+  13 ../out/spades/trim_130.spades_def/scaffolds.fasta ==> trim_130.spades_def_scaffolds
+  14 ../out/spades/trim_130.spades_kmer/scaffolds.fasta ==> trim_130.spades_kmer_scaffolds
+  15 ../out/spades/trim_75clip.spades_def/scaffolds.fasta ==> trim_75clip.spades_def_scaffolds
+  16 ../out/spades/trim_75clip.spades_kmer/scaffolds.fasta ==> trim_75clip.spades_kmer_scaffolds
+  17 ../out/spades/trim_75.spades_def/scaffolds.fasta ==> trim_75.spades_def_scaffolds
+  18 ../out/spades/trim_75.spades_kmer/scaffolds.fasta ==> trim_75.spades_kmer_scaffolds
+  19 ../out/spades/trim_def.spades_def/scaffolds.fasta ==> trim_def.spades_def_scaffolds
+  20 ../out/spades/trim_def.spades_kmer/scaffolds.fasta ==> trim_def.spades_kmer_scaffolds
+
+2023-02-19 22:57:59
+Running Basic statistics processor...
+  Contig files: 
+    1  trim_130clip.spades_def_contigs
+    2  trim_130clip.spades_kmer_contigs
+    3  trim_130.spades_def_contigs
+    4  trim_130.spades_kmer_contigs
+    5  trim_75clip.spades_def_contigs
+    6  trim_75clip.spades_kmer_contigs
+    7  trim_75.spades_def_contigs
+    8  trim_75.spades_kmer_contigs
+    9  trim_def.spades_def_contigs
+    10 trim_def.spades_kmer_contigs
+    11 trim_130clip.spades_def_scaffolds
+    12 trim_130clip.spades_kmer_scaffolds
+    13 trim_130.spades_def_scaffolds
+    14 trim_130.spades_kmer_scaffolds
+    15 trim_75clip.spades_def_scaffolds
+    16 trim_75clip.spades_kmer_scaffolds
+    17 trim_75.spades_def_scaffolds
+    18 trim_75.spades_kmer_scaffolds
+    19 trim_def.spades_def_scaffolds
+    20 trim_def.spades_kmer_scaffolds
+  Calculating N50 and L50...
+    1  trim_130clip.spades_def_contigs, N50 = 92834, L50 = 25, Total length = 6782941, GC % = 60.65, # N's per 100 kbp =  0.00
+    2  trim_130clip.spades_kmer_contigs, N50 = 52922, L50 = 43, Total length = 6821559, GC % = 60.66, # N's per 100 kbp =  0.00
+    3  trim_130.spades_def_contigs, N50 = 126463, L50 = 16, Total length = 6796637, GC % = 60.64, # N's per 100 kbp =  0.00
+    4  trim_130.spades_kmer_contigs, N50 = 97137, L50 = 26, Total length = 6831807, GC % = 60.65, # N's per 100 kbp =  0.00
+    5  trim_75clip.spades_def_contigs, N50 = 96875, L50 = 23, Total length = 6782929, GC % = 60.65, # N's per 100 kbp =  0.00
+    6  trim_75clip.spades_kmer_contigs, N50 = 101354, L50 = 23, Total length = 6796578, GC % = 60.65, # N's per 100 kbp =  0.00
+    7  trim_75.spades_def_contigs, N50 = 139126, L50 = 14, Total length = 6796812, GC % = 60.64, # N's per 100 kbp =  0.00
+    8  trim_75.spades_kmer_contigs, N50 = 120379, L50 = 17, Total length = 6797394, GC % = 60.65, # N's per 100 kbp =  0.00
+    9  trim_def.spades_def_contigs, N50 = 139126, L50 = 14, Total length = 6796792, GC % = 60.64, # N's per 100 kbp =  0.00
+    10 trim_def.spades_kmer_contigs, N50 = 101577, L50 = 26, Total length = 6831208, GC % = 60.65, # N's per 100 kbp =  0.00
+    11 trim_130clip.spades_def_scaffolds, N50 = 94293, L50 = 24, Total length = 6783942, GC % = 60.65, # N's per 100 kbp =  14.62
+    12 trim_130clip.spades_kmer_scaffolds, N50 = 52922, L50 = 43, Total length = 6821559, GC % = 60.66, # N's per 100 kbp =  0.00
+    13 trim_130.spades_def_scaffolds, N50 = 135443, L50 = 15, Total length = 6797195, GC % = 60.64, # N's per 100 kbp =  11.61
+    14 trim_130.spades_kmer_scaffolds, N50 = 97137, L50 = 26, Total length = 6832011, GC % = 60.65, # N's per 100 kbp =  4.32
+    15 trim_75clip.spades_def_scaffolds, N50 = 105322, L50 = 22, Total length = 6783756, GC % = 60.65, # N's per 100 kbp =  15.89
+    16 trim_75clip.spades_kmer_scaffolds, N50 = 103720, L50 = 22, Total length = 6797163, GC % = 60.65, # N's per 100 kbp =  11.70
+    17 trim_75.spades_def_scaffolds, N50 = 140902, L50 = 13, Total length = 6797270, GC % = 60.64, # N's per 100 kbp =  10.15
+    18 trim_75.spades_kmer_scaffolds, N50 = 139520, L50 = 16, Total length = 6797868, GC % = 60.65, # N's per 100 kbp =  10.02
+    19 trim_def.spades_def_scaffolds, N50 = 140902, L50 = 13, Total length = 6797250, GC % = 60.64, # N's per 100 kbp =  10.15
+    20 trim_def.spades_kmer_scaffolds, N50 = 101577, L50 = 26, Total length = 6831412, GC % = 60.65, # N's per 100 kbp =  4.32
+  Drawing Nx plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/GC_content_plot.pdf
+  Drawing trim_130clip.spades_def_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip.spades_def_contigs_GC_content_plot.pdf
+  Drawing trim_130clip.spades_kmer_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip.spades_kmer_contigs_GC_content_plot.pdf
+  Drawing trim_130.spades_def_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130.spades_def_contigs_GC_content_plot.pdf
+  Drawing trim_130.spades_kmer_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130.spades_kmer_contigs_GC_content_plot.pdf
+  Drawing trim_75clip.spades_def_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip.spades_def_contigs_GC_content_plot.pdf
+  Drawing trim_75clip.spades_kmer_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip.spades_kmer_contigs_GC_content_plot.pdf
+  Drawing trim_75.spades_def_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75.spades_def_contigs_GC_content_plot.pdf
+  Drawing trim_75.spades_kmer_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75.spades_kmer_contigs_GC_content_plot.pdf
+  Drawing trim_def.spades_def_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def.spades_def_contigs_GC_content_plot.pdf
+  Drawing trim_def.spades_kmer_contigs GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def.spades_kmer_contigs_GC_content_plot.pdf
+  Drawing trim_130clip.spades_def_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip.spades_def_scaffolds_GC_content_plot.pdf
+  Drawing trim_130clip.spades_kmer_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip.spades_kmer_scaffolds_GC_content_plot.pdf
+  Drawing trim_130.spades_def_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130.spades_def_scaffolds_GC_content_plot.pdf
+  Drawing trim_130.spades_kmer_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130.spades_kmer_scaffolds_GC_content_plot.pdf
+  Drawing trim_75clip.spades_def_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip.spades_def_scaffolds_GC_content_plot.pdf
+  Drawing trim_75clip.spades_kmer_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip.spades_kmer_scaffolds_GC_content_plot.pdf
+  Drawing trim_75.spades_def_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75.spades_def_scaffolds_GC_content_plot.pdf
+  Drawing trim_75.spades_kmer_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75.spades_kmer_scaffolds_GC_content_plot.pdf
+  Drawing trim_def.spades_def_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def.spades_def_scaffolds_GC_content_plot.pdf
+  Drawing trim_def.spades_kmer_scaffolds GC content plot...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def.spades_kmer_scaffolds_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/coverage_histogram.pdf
+  Drawing trim_130clip.spades_def_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip-spades_def_contigs_coverage_histogram.pdf
+  Drawing trim_130clip.spades_kmer_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip-spades_kmer_contigs_coverage_histogram.pdf
+  Drawing trim_130.spades_def_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130-spades_def_contigs_coverage_histogram.pdf
+  Drawing trim_130.spades_kmer_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130-spades_kmer_contigs_coverage_histogram.pdf
+  Drawing trim_75clip.spades_def_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip-spades_def_contigs_coverage_histogram.pdf
+  Drawing trim_75clip.spades_kmer_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip-spades_kmer_contigs_coverage_histogram.pdf
+  Drawing trim_75.spades_def_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75-spades_def_contigs_coverage_histogram.pdf
+  Drawing trim_75.spades_kmer_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75-spades_kmer_contigs_coverage_histogram.pdf
+  Drawing trim_def.spades_def_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def-spades_def_contigs_coverage_histogram.pdf
+  Drawing trim_def.spades_kmer_contigs coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def-spades_kmer_contigs_coverage_histogram.pdf
+  Drawing trim_130clip.spades_def_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip-spades_def_scaffolds_coverage_histogram.pdf
+  Drawing trim_130clip.spades_kmer_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130clip-spades_kmer_scaffolds_coverage_histogram.pdf
+  Drawing trim_130.spades_def_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130-spades_def_scaffolds_coverage_histogram.pdf
+  Drawing trim_130.spades_kmer_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_130-spades_kmer_scaffolds_coverage_histogram.pdf
+  Drawing trim_75clip.spades_def_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip-spades_def_scaffolds_coverage_histogram.pdf
+  Drawing trim_75clip.spades_kmer_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75clip-spades_kmer_scaffolds_coverage_histogram.pdf
+  Drawing trim_75.spades_def_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75-spades_def_scaffolds_coverage_histogram.pdf
+  Drawing trim_75.spades_kmer_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_75-spades_kmer_scaffolds_coverage_histogram.pdf
+  Drawing trim_def.spades_def_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def-spades_def_scaffolds_coverage_histogram.pdf
+  Drawing trim_def.spades_kmer_scaffolds coverage histogram (bin size: 1x)...
+    saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/basic_stats/trim_def-spades_kmer_scaffolds_coverage_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2023-02-19 22:58:19
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2023-02-19 22:58:24
+RESULTS:
+  Text versions of total report are saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/report.html
+  PDF version (tables and plots) is saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/report.pdf
+  Icarus (contig browser) is saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/icarus.html
+  Log is saved to /data2/PEG/hoaxaca/REAA/Pseudomonas/res/quast_results/results_2023_02_19_22_57_57/quast.log
+
+Finished: 2023-02-19 22:58:24
+Elapsed time: 0:00:27.207472
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

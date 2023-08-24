@@ -1,0 +1,20 @@
+#$ -S /bin/bash
+#$ -N trim
+#$ -cwd
+#$ -o trim.out
+#$ -e trim.err
+source /etc/bashrc
+export LC_ALL=en_US.UTF-8
+
+##RodolfoAngeles 19/02/23
+cd ../data/raw
+
+trim_galore --paired --illumina --fastqc -o ../clean/def *.fastq
+
+trim_galore --paired --illumina --fastqc --length 75 -o ../clean/75 *.fastq
+
+trim_galore --paired --illumina --fastqc --length 130 -o ../clean/130 *.fastq
+
+trim_galore --paired --illumina --fastqc --length 75 --clip_R1 15 --clip_R2 15 --three_prime_clip_R1 2 --three_prime_clip_R2 2 -o ../clean/75clip *.fastq
+
+trim_galore --paired --illumina --fastqc --length 130 --clip_R1 15 --clip_R2 15 --three_prime_clip_R1 2 --three_prime_clip_R2 2 -o ../clean/130clip *.fastq

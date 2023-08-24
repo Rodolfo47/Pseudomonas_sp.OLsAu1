@@ -1,0 +1,31 @@
+#$ -S /bin/bash
+#$ -N assem
+#$ -cwd
+#$ -o assem.out
+#$ -e assem.err
+source /etc/bashrc
+export LC_ALL=en_US.UTF-8
+
+#Trim_def
+spades.py -1 ../data/clean/def/*val_1.fq -2 ../data/clean/def/*val_2.fq --careful -t 40 -o ../out/spades/trim_def.spades_def
+
+spades.py -1 ../data/clean/def/*val_1.fq -2 ../data/clean/def/*val_2.fq --careful -k 127,117,107,97 -t 40 -o ../out/spades/trim_def.spades_kmer
+
+#Trim_130
+spades.py -1 ../data/clean/130/*val_1.fq -2 ../data/clean/130/*val_2.fq --careful -t 40 -o ../out/spades/trim_130.spades_def
+
+spades.py -1 ../data/clean/130/*val_1.fq -2 ../data/clean/130/*val_2.fq --careful -k 127,117,107,97 -t 40 -o ../out/spades/trim_130.spades_kmer
+
+#Trim_130clip
+spades.py -1 ../data/clean/130clip/*val_1.fq -2 ../data/clean/130clip/*val_2.fq --careful -t 40 -o ../out/spades/trim_130clip.spades_def
+
+spades.py -1 ../data/clean/130clip/*val_1.fq -2 ../data/clean/130clip/*val_2.fq --careful -k 127,117,107,97 -t 40 -o ../out/spades/trim_130clip.spades_kmer
+#Trim_75
+spades.py -1 ../data/clean/75/*val_1.fq -2 ../data/clean/75/*val_2.fq --careful -t 40 -o ../out/spades/trim_75.spades_def
+
+spades.py -1 ../data/clean/75/*val_1.fq -2 ../data/clean/75/*val_2.fq --careful -k 75,65,55,45 -t 40 -o ../out/spades/trim_75.spades_kmer
+
+#Trim_75clip
+spades.py -1 ../data/clean/75clip/*val_1.fq -2 ../data/clean/75clip/*val_2.fq --careful -t 40 -o ../out/spades/trim_75clip.spades_def
+
+spades.py -1 ../data/clean/75clip/*val_1.fq -2 ../data/clean/75clip/*val_2.fq --careful -k 75,65,55,45 -t 40 -o ../out/spades/trim_75clip.spades_kmer

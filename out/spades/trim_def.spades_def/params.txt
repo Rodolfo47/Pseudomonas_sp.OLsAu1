@@ -1,0 +1,36 @@
+Command line: /export/apps/bioconda/bin/spades.py	-1	/data2/PEG/hoaxaca/REAA/Pseudomonas/data/clean/def/Rosario_S4_L001_R1_001_val_1.fq	-2	/data2/PEG/hoaxaca/REAA/Pseudomonas/data/clean/def/Rosario_S4_L001_R2_001_val_2.fq	--careful	-t	40	-o	/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def	
+
+System information:
+  SPAdes version: 3.13.1
+  Python version: 3.7.8
+  OS: Linux-2.6.32-504.16.2.el6.x86_64-x86_64-with-centos-6.6-Final
+
+Output dir: /data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/data2/PEG/hoaxaca/REAA/Pseudomonas/data/clean/def/Rosario_S4_L001_R1_001_val_1.fq']
+      right reads: ['/data2/PEG/hoaxaca/REAA/Pseudomonas/data/clean/def/Rosario_S4_L001_R2_001_val_2.fq']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned ON
+  MismatchCorrector will be used
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/tmp
+  Threads: 40
+  Memory limit (in Gb): 250
+

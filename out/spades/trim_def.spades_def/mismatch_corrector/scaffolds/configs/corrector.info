@@ -1,0 +1,7 @@
+"bwa": "/share/apps/bioconda/bin/spades-bwa"
+"dataset": "/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/input_dataset.yaml"
+"log_filename": "log.properties"
+"max_nthreads": !!int "40"
+"output_dir": "/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/mismatch_corrector/scaffolds"
+"strategy": "mapped_squared"
+"work_dir": "/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/tmp/corrector_uj5l1n8r"

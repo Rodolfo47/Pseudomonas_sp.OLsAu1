@@ -1,0 +1,19 @@
+# BUSCO version is: 5.3.2 
+# The lineage dataset is: pseudomonadales_odb10 (Creation date: 2020-03-06, number of genomes: 159, number of BUSCOs: 782)
+# Summarized benchmarking in BUSCO notation for file /data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_75.spades_kmer/contigs.fasta
+# BUSCO was run in mode: genome
+# Gene predictor used: prodigal
+
+	***** Results: *****
+
+	C:99.7%[S:99.7%,D:0.0%],F:0.3%,M:0.0%,n:782	   
+	780	Complete BUSCOs (C)			   
+	780	Complete and single-copy BUSCOs (S)	   
+	0	Complete and duplicated BUSCOs (D)	   
+	2	Fragmented BUSCOs (F)			   
+	0	Missing BUSCOs (M)			   
+	782	Total BUSCO groups searched		   
+
+Dependencies and versions:
+	hmmsearch: 3.1
+	prodigal: 2.6.3

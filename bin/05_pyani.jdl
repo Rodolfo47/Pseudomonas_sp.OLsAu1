@@ -1,0 +1,17 @@
+#$ -S /bin/bash
+#$ -N ani
+#$ -cwd
+#$ -o ani.out
+#$ -e ani.err
+source /etc/bashrc
+export LC_ALL=en_US.UTF-8
+
+##RodolfoAngeles 2/03/23
+
+#average_nucleotide_identity.py -i ../data -m ANIm -g --gmethod seaborn --labels labels.tab -o ../out/pyani/pyani.v1
+
+#average_nucleotide_identity.py -i ../data -m ANIm -g --labels labels.tab -o ../out/pyani/pyani.v2
+
+#average_nucleotide_identity.py -i ../data -m ANIm -g --gmethod seaborn --labels labels.tab -o ../out/pyani/pyani.v3
+
+average_nucleotide_identity.py -i ../data -m ANIm -g --labels labels.tab -o ../out/pyani/pyani.v4

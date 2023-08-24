@@ -1,0 +1,8 @@
+- "left reads":
+  - "/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/corrected/Rosario_S4_L001_R1_001_val_1.00.0_0.cor.fastq.gz"
+  "orientation": "fr"
+  "right reads":
+  - "/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/corrected/Rosario_S4_L001_R2_001_val_2.00.0_0.cor.fastq.gz"
+  "single reads":
+  - "/data2/PEG/hoaxaca/REAA/Pseudomonas/out/spades/trim_def.spades_def/corrected/Rosario_S4_L001_R_unpaired.00.0_0.cor.fastq.gz"
+  "type": "paired-end"

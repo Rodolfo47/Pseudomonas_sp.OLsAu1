@@ -1,0 +1,7 @@
+organism: Pseudomonas species OLsAu1 
+contigs: 624
+bases: 6884269
+CDS: 6188
+rRNA: 3
+tRNA: 62
+tmRNA: 1

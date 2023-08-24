@@ -1,0 +1,4 @@
+[tbl2asn-forever] Found Prokka input, correcting dates in .gbf|.sqn files.
+[tbl2asn-forever] Correcting dates in ../out/prokka/Pseudomonas_sp_OLsAu1/Pseudomonas_sp_OLsAu1.gbf
+[tbl2asn-forever] Correcting dates in ../out/prokka/Pseudomonas_sp_OLsAu1/Pseudomonas_sp_OLsAu1.sqn
+[tbl2asn-forever] Dates changed from 01-JAN-2019 to 20-FEB-2023

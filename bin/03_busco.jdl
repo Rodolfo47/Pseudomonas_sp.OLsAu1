@@ -1,0 +1,12 @@
+#$ -S /bin/bash
+#$ -N busco
+#$ -cwd
+#$ -o busco.out
+#$ -e busco.err
+source /etc/bashrc
+export LC_ALL=en_US.UTF-8
+conda activate busco
+
+for assem in $(ls ../out/spades/); do
+	busco -i ../out/spades/$assem/contigs.fasta -l pseudomonadales_odb10 -o ../out/busco/$assem -m genome -f ;
+done

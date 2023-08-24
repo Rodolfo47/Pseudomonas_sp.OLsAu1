@@ -1,0 +1,10 @@
+#$ -S /bin/bash
+#$ -N prokka
+#$ -cwd
+#$ -o prokka.out
+#$ -e prokka.err
+source /etc/bashrc
+export LC_ALL=en_US.UTF-8
+conda activate prokka
+
+prokka --prefix Pseudomonas_sp_OLsAu1 --kingdom Bacteria --genus Pseudomonas --strain OLsAu1 --usegenus --cpus 40 --outdir ../out/prokka/Pseudomonas_sp_OLsAu1 ../res/assemby/Pseudomonas_sp_OLsAu1.fna
