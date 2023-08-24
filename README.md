@@ -1,8 +1,8 @@
 # *Pseudomonas* sp.
 
-Rodolfo Ángeles
+Rodolfo Ángeles y Diana Oaxaca
 
-February 2023
+February-August 2023
 
 
 
