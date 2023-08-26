@@ -1,45 +1,45 @@
-# *Pseudomonas* sp.
+# *Pseudomonas* sp. OLsAu1
 
-Rodolfo Ángeles y Diana Oaxaca
+This is the bioinformatics repository that contains the code we use to assemble, annotate, and assign a species to the OLsAu1 strain.
+
+This genome is available from NCBI (JAVGXC000000000) and corresponding to the article:
+
+**Whole-genome sequence of *Pseudomonas yamanorum* OLsAu1 isolated from the edible wild ectomycorrhizal mushroom *Lactarius* sp. section Deliciosi**
+
+
+
+The computational procedures were carried out by Rodolfo Ángeles and Diana Oaxaca at Kayab, CCG, UNAM cluster.
+
+Genome sequencing was performed by Rosario Ramírez Mendoza.
+
+The isolation of the strain was carried out by Juan José Almaraz Suárez.
+
+The conceptualization of the project, the coordination of the work team and the review of the manuscript were carried out by Jesús Pérez Moreno.
 
 February-August 2023
 
 
 
-## Aim and scope
-
-Rosario Ramírez Mendoza and Jesús Pérez Moreno obtained the Mi-Seq sequencing of the OLsAu1 strain of *Pseudomonas* sp. previously approximated to *Pseudomonas azotoformans* (Pineda-Mendoza et al. 2019).
-
-I'm going to generate the genome assembly and annotation of the strain. Later together we will decide the subsequent analyzes.
-
-All the bioinformatics processes were carried out in the Kayab, CCG, UNAM cluster.
-
-A *P. azotoformans* genome is reported (Fang et al. 2016).
+## Work flow
 
 
 
-## To do list
+- [x] Assembly
+  - [x] Cleaning
+  - [x] Assembling
+  - [x] Selecction and related
 
-I will tick this list of activities and convert some ones into the sections of this binnacle
-
-- [x] Create the working directories in Kayab and on my laptop
-- [x] Upload sequencing data
-- [x] Raw FastQC
-- [x] Cleaning
-- [x] Celan FastQC
-- [x] Backup clean data
-- [x] Assembling
-- [x] QUAST
-- [x] Assembly report
-- [x] BUSCO
 - [x] Annotation
-- [ ] Genome descriptors table
-- [ ] Annotation report
-- [ ] Schedule second meeting
+  - [x] Prokka
+  - [x] EggNog
+
+- [x] Taxonomic placement
+  - [x] pyani
 
 
+## Assembly
 
-## Cleaning
+### Cleaning
 
 Ver la calidad de los datos crudos
 
@@ -101,7 +101,7 @@ trim_galore --paired --illumina --fastqc --length 130 --clip_R1 15 --clip_R2 15 
 
 
 
-## Assembling
+### Assembling
 
 Do the assembly whit SPAdes (v3.13.1)
 
@@ -147,9 +147,7 @@ spades.py -1 ../data/clean/75clip/*val_1.fq -2 ../data/clean/75clip/*val_2.fq --
 
 
 
-## BUSCO
-
-
+### BUSCO
 
 ```sh
 qsub -q Big.q@compute-1-11.local 03_busco.jdl
@@ -170,7 +168,7 @@ for assem in $(ls ../out/spades/); do
 done
 ```
 
-## Assembling results
+### Assembling results
 
 Best assembly were obtained with default trimming parameters and default (autodetect k-mer size) assembling parameter.
 
@@ -181,7 +179,89 @@ cp ../out/spades/trim_def.spades_def/*.fasta ../res/assemby/
 ln -s ../res/assemby/contigs.fasta ../res/assemby/Pseudomonas_sp_OLsAu1.fna
 ```
 
+## Sequencing coverage
 
+Mapping clean reads using bowtie (version 2.3.5.1)
+
+```sh
+#Coverage estimation with bowtie2
+##Build index
+bowtie2-build ../../data/Pseudomonas_sp_OLsAu1.fna OLsAu1.fna
+## Mapping
+bowtie2 -p 22 -x OLsAu1.fna -1 ../../data/clean/def/Rosario_S4_L001_R1_001_val_1.fq -2 ../../data/clean/def/Rosario_S4_L001_R2_001_val_2.fq -S OLsAu1.sam
+
+#2137703 reads; of these:
+#  2137703 (100.00%) were paired; of these:
+#    93723 (4.38%) aligned concordantly 0 times
+#    2027987 (94.87%) aligned concordantly exactly 1 time
+#    15993 (0.75%) aligned concordantly >1 times
+#    ----
+#    93723 pairs aligned concordantly 0 times; of these:
+#      64845 (69.19%) aligned discordantly 1 time
+#    ----
+#    28878 pairs aligned 0 times concordantly or discordantly; of these:
+#      57756 mates make up the pairs; of these:
+#        28533 (49.40%) aligned 0 times
+#        24284 (42.05%) aligned exactly 1 time
+#        4939 (8.55%) aligned >1 times
+#99.33% overall alignment rate
+
+##Calculation
+	
+	#2137703 (100.00%) were paired;
+	#99.33% overall alignment rate
+	# So:
+	# paired seq * alignment rate
+echo "2137703 * 0.9933" | bc -l 
+	# Result =  2123380.3899 aligned paired reads
+	# So:
+	# (aligned paired reads * read length * pair) / genome size
+echo "(2123380.3899 * 151 * 2) / 6884230" | bc -l 
+	# Result = 93.14925238549554561657 genome seq coverage
+
+```
+
+
+
+## Get some values for the table 1
+
+
+
+```sh
+#Features (Prokka): 6254
+grep -c ">" Pseudomonas_sp_OLsAu1.ffn
+#CDS (Prokka): 6188
+awk -F '\t' '$2 == "CDS" { print $2 }' Pseudomonas_sp_OLsAu1.tsv | wc -l
+#Proteins (Prokka): 6188
+grep -c ">" Pseudomonas_sp_OLsAu1.faa
+#Hypothetical proteins (Prokka): 2353
+grep -c "hypothetical protein" Pseudomonas_sp_OLsAu1.faa
+#COGs (Prokka):2555
+grep -v "locus_tag" Pseudomonas_sp_OLsAu1.tsv | awk -F '\t' '{ print $6 }' | grep -vc " ^$ "
+#EC (Prokka):1962
+grep -v "locus_tag" Pseudomonas_sp_OLsAu1.tsv | awk -F '\t' '{ print $5 }' | grep -vc " ^$ "
+
+#Proteins (EggNog):6407
+grep -c ">" MM_d_a4j77c.emapper.genepred.fasta
+#Hypothetical proteins (EggNog): 145 + 373 = 518
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' ' {print $8}' | grep -c "Protein of unknown function"
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' ' {print $8}' | grep -c "-"
+#Annotated COGs (EggNog):5724
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' '$7 != "-" {print $7}' | wc -l
+#Annotated KOs (EggNog):3697
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' '$12 != "-" { print $12 }' | wc -l
+#CAZy (EggNog):50
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' '$19 != "-" { print $19 }' | wc -l
+#PFAM (EggNog):5628
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' '$21 != "-" { print $21 }' | wc -l
+#genome density: 6407 *1000000 / 6884230 = 930.67 
+```
+
+
+
+```
+grep -v "#" MM_d_a4j77c.emapper.annotations.tsv | awk -F '\t' '{ print $1, $12, $13, $14, $15, $16, $18 }' | grep "ko:" | wc -l
+```
 
 ## Annotation
 
@@ -204,9 +284,52 @@ conda activate prokka
 prokka --prefix Pseudomonas_sp_OLsAu1 --kingdom Bacteria --genus Pseudomonas --strain OLsAu1 --usegenus --cpus 40 --outdir ../out/prokka/Pseudomonas_sp_OLsAu1 ../res/assemby/Pseudomonas_sp_OLsAu1.fna
 ```
 
-Terminar la tabla de reporte y compartir los resultados para agendar cita 
+### EggNog
+
+New annotations with EggNog (emapper-2.1.9: online server)
+
+| Job name    | User                 | Date created | File                      | Sequences (type)      | Total length | Min. hit e-value | Min. hit bit-score | Min. % of identity | Min. % of query cov. | Min. % of subject cov. | Tax. scope | Orth. restrictions | GO evidence    |      |
+| ----------- | -------------------- | ------------ | ------------------------- | --------------------- | ------------ | ---------------- | ------------------ | ------------------ | -------------------- | ---------------------- | ---------- | ------------------ | -------------- | ---- |
+| MM_d_a4j77c | rodolfo.angeles. ... | 03/19/23     | Pseudomonas_sp_OLsAu1.fna | 624 (contigs_genomic) | 6884269      | 0.001            | 60                 | 40                 | 20                   | 20                     | auto       | all                | non-electronic |      |
 
 
 
-- Fang, Y., Wu, L., Chen, G., & Feng, G. (2016). Complete genome sequence of Pseudomonas azotoformans S4, a potential biocontrol bacterium. Journal of biotechnology, 227, 25-26.
-- Pineda-Mendoza, D. Y., Almaraz, J. J., Lara-Hernandez, M. E., Arteaga-Garibay, R., & Silva-Rojas, H. V. (2019). Cepas de bacterias aisladas de esporomas de hongos ectomicorrízicos promueven el crecimiento vegetal. ITEA-Información Técnica Económica Agraria, 115(1), 4-17.
+Reference:
+
+**eggNOG-mapper v2: functional annotation, orthology assignments, and domain prediction at the metagenomic scale.**
+*Carlos P. Cantalapiedra, Ana Hernandez-Plaza, Ivica Letunic, Peer Bork, and Jaime Huerta-Cepas.* 2021
+[Molecular Biology and Evolution, msab293, https://doi.org/10.1093/molbev/msab293](https://doi.org/10.1093/molbev/msab293)
+
+
+
+## Taxonomic placement
+
+### ANI
+
+pyani (0.2.11)
+
+```sh
+qsub -q Big.q@compute-1-13.local 05_pyani.jdl
+```
+
+
+
+```sh
+#$ -S /bin/bash
+#$ -N ani
+#$ -cwd
+#$ -o ani.out
+#$ -e ani.err
+source /etc/bashrc
+export LC_ALL=en_US.UTF-8
+
+##RodolfoAngeles 2/03/23
+
+#average_nucleotide_identity.py -i ../data -m ANIm -g --gmethod seaborn --labels labels.tab -o ../out/pyani/pyani.v1
+
+#average_nucleotide_identity.py -i ../data -m ANIm -g --labels labels.tab -o ../out/pyani/pyani.v2
+
+#average_nucleotide_identity.py -i ../data -m ANIm -g --gmethod seaborn --labels labels.tab -o ../out/pyani/pyani.v3
+
+average_nucleotide_identity.py -i ../data -m ANIm -g --labels labels.tab -o ../out/pyani/pyani.v4
+```
